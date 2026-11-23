@@ -1,0 +1,1174 @@
+{
+  "A": {
+    "data": {
+      "source": "NASA POWER 2024, Hefei (31.8\u00b0N, 117.2\u00b0E)",
+      "method": "Hargreaves ET\u2080 (FAO-56), base=45 min @ ref ET\u2080",
+      "ref_et0": 8.79,
+      "mean_et0": 10.91,
+      "fields": {
+        "A": {
+          "name": "Valley (3ha)",
+          "irrigation_min": 45
+        },
+        "B": {
+          "name": "Mid (2ha)",
+          "irrigation_min": 31
+        },
+        "C": {
+          "name": "Upper (1.5ha)",
+          "irrigation_min": 22
+        }
+      },
+      "daily_temps": [
+        {
+          "day": 2,
+          "t2m": 19.97
+        },
+        {
+          "day": 3,
+          "t2m": 19.52
+        },
+        {
+          "day": 4,
+          "t2m": 15.1
+        },
+        {
+          "day": 5,
+          "t2m": 13.7
+        },
+        {
+          "day": 6,
+          "t2m": 13.18
+        },
+        {
+          "day": 7,
+          "t2m": 13.0
+        },
+        {
+          "day": 8,
+          "t2m": 13.83
+        },
+        {
+          "day": 9,
+          "t2m": 14.22
+        },
+        {
+          "day": 10,
+          "t2m": 16.6
+        },
+        {
+          "day": 11,
+          "t2m": 17.34
+        },
+        {
+          "day": 12,
+          "t2m": 17.64
+        },
+        {
+          "day": 13,
+          "t2m": 18.88
+        },
+        {
+          "day": 14,
+          "t2m": 18.92
+        },
+        {
+          "day": 15,
+          "t2m": 19.75
+        },
+        {
+          "day": 16,
+          "t2m": 19.52
+        },
+        {
+          "day": 17,
+          "t2m": 18.76
+        },
+        {
+          "day": 18,
+          "t2m": 15.1
+        },
+        {
+          "day": 19,
+          "t2m": 16.35
+        },
+        {
+          "day": 20,
+          "t2m": 17.2
+        },
+        {
+          "day": 21,
+          "t2m": 18.28
+        },
+        {
+          "day": 22,
+          "t2m": 18.81
+        },
+        {
+          "day": 23,
+          "t2m": 19.04
+        },
+        {
+          "day": 24,
+          "t2m": 19.35
+        },
+        {
+          "day": 25,
+          "t2m": 18.07
+        },
+        {
+          "day": 26,
+          "t2m": 19.05
+        },
+        {
+          "day": 27,
+          "t2m": 20.64
+        },
+        {
+          "day": 28,
+          "t2m": 21.28
+        },
+        {
+          "day": 29,
+          "t2m": 18.8
+        },
+        {
+          "day": 30,
+          "t2m": 18.93
+        },
+        {
+          "day": 31,
+          "t2m": 14.7
+        }
+      ]
+    },
+    "results": [
+      {
+        "order": "A\u2192B\u2192C",
+        "total": 136
+      },
+      {
+        "order": "A\u2192C\u2192B",
+        "total": 149
+      },
+      {
+        "order": "C\u2192A\u2192B",
+        "total": 149
+      },
+      {
+        "order": "B\u2192A\u2192C",
+        "total": 151
+      },
+      {
+        "order": "B\u2192C\u2192A",
+        "total": 173
+      },
+      {
+        "order": "C\u2192B\u2192A",
+        "total": 173
+      }
+    ],
+    "best": {
+      "order": "A\u2192B\u2192C",
+      "total": 136
+    },
+    "worst": {
+      "order": "C\u2192B\u2192A",
+      "total": 173
+    },
+    "saving_min": 37,
+    "saving_pct": 21.4,
+    "traces": {
+      "A\u2192B\u2192C": [
+        {
+          "field": "A",
+          "op": "Irrigate",
+          "start": 0,
+          "end": 45,
+          "resource": "Pump"
+        },
+        {
+          "field": "A",
+          "op": "Fertilize",
+          "start": 45,
+          "end": 75,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Scout",
+          "start": 75,
+          "end": 95,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Spray",
+          "start": 95,
+          "end": 120,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Irrigate",
+          "start": 45,
+          "end": 76,
+          "resource": "Pump"
+        },
+        {
+          "field": "B",
+          "op": "Fertilize",
+          "start": 76,
+          "end": 96,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Scout",
+          "start": 96,
+          "end": 110,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Spray",
+          "start": 110,
+          "end": 127,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Irrigate",
+          "start": 76,
+          "end": 98,
+          "resource": "Pump"
+        },
+        {
+          "field": "C",
+          "op": "Fertilize",
+          "start": 98,
+          "end": 113,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Scout",
+          "start": 113,
+          "end": 123,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Spray",
+          "start": 123,
+          "end": 136,
+          "resource": "Field"
+        }
+      ],
+      "A\u2192C\u2192B": [
+        {
+          "field": "A",
+          "op": "Irrigate",
+          "start": 0,
+          "end": 45,
+          "resource": "Pump"
+        },
+        {
+          "field": "A",
+          "op": "Fertilize",
+          "start": 45,
+          "end": 75,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Scout",
+          "start": 75,
+          "end": 95,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Spray",
+          "start": 95,
+          "end": 120,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Irrigate",
+          "start": 45,
+          "end": 67,
+          "resource": "Pump"
+        },
+        {
+          "field": "C",
+          "op": "Fertilize",
+          "start": 67,
+          "end": 82,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Scout",
+          "start": 82,
+          "end": 92,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Spray",
+          "start": 92,
+          "end": 105,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Irrigate",
+          "start": 67,
+          "end": 98,
+          "resource": "Pump"
+        },
+        {
+          "field": "B",
+          "op": "Fertilize",
+          "start": 98,
+          "end": 118,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Scout",
+          "start": 118,
+          "end": 132,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Spray",
+          "start": 132,
+          "end": 149,
+          "resource": "Field"
+        }
+      ],
+      "B\u2192A\u2192C": [
+        {
+          "field": "B",
+          "op": "Irrigate",
+          "start": 0,
+          "end": 31,
+          "resource": "Pump"
+        },
+        {
+          "field": "B",
+          "op": "Fertilize",
+          "start": 31,
+          "end": 51,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Scout",
+          "start": 51,
+          "end": 65,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Spray",
+          "start": 65,
+          "end": 82,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Irrigate",
+          "start": 31,
+          "end": 76,
+          "resource": "Pump"
+        },
+        {
+          "field": "A",
+          "op": "Fertilize",
+          "start": 76,
+          "end": 106,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Scout",
+          "start": 106,
+          "end": 126,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Spray",
+          "start": 126,
+          "end": 151,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Irrigate",
+          "start": 76,
+          "end": 98,
+          "resource": "Pump"
+        },
+        {
+          "field": "C",
+          "op": "Fertilize",
+          "start": 98,
+          "end": 113,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Scout",
+          "start": 113,
+          "end": 123,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Spray",
+          "start": 123,
+          "end": 136,
+          "resource": "Field"
+        }
+      ],
+      "B\u2192C\u2192A": [
+        {
+          "field": "B",
+          "op": "Irrigate",
+          "start": 0,
+          "end": 31,
+          "resource": "Pump"
+        },
+        {
+          "field": "B",
+          "op": "Fertilize",
+          "start": 31,
+          "end": 51,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Scout",
+          "start": 51,
+          "end": 65,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Spray",
+          "start": 65,
+          "end": 82,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Irrigate",
+          "start": 31,
+          "end": 53,
+          "resource": "Pump"
+        },
+        {
+          "field": "C",
+          "op": "Fertilize",
+          "start": 53,
+          "end": 68,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Scout",
+          "start": 68,
+          "end": 78,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Spray",
+          "start": 78,
+          "end": 91,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Irrigate",
+          "start": 53,
+          "end": 98,
+          "resource": "Pump"
+        },
+        {
+          "field": "A",
+          "op": "Fertilize",
+          "start": 98,
+          "end": 128,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Scout",
+          "start": 128,
+          "end": 148,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Spray",
+          "start": 148,
+          "end": 173,
+          "resource": "Field"
+        }
+      ],
+      "C\u2192A\u2192B": [
+        {
+          "field": "C",
+          "op": "Irrigate",
+          "start": 0,
+          "end": 22,
+          "resource": "Pump"
+        },
+        {
+          "field": "C",
+          "op": "Fertilize",
+          "start": 22,
+          "end": 37,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Scout",
+          "start": 37,
+          "end": 47,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Spray",
+          "start": 47,
+          "end": 60,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Irrigate",
+          "start": 22,
+          "end": 67,
+          "resource": "Pump"
+        },
+        {
+          "field": "A",
+          "op": "Fertilize",
+          "start": 67,
+          "end": 97,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Scout",
+          "start": 97,
+          "end": 117,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Spray",
+          "start": 117,
+          "end": 142,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Irrigate",
+          "start": 67,
+          "end": 98,
+          "resource": "Pump"
+        },
+        {
+          "field": "B",
+          "op": "Fertilize",
+          "start": 98,
+          "end": 118,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Scout",
+          "start": 118,
+          "end": 132,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Spray",
+          "start": 132,
+          "end": 149,
+          "resource": "Field"
+        }
+      ],
+      "C\u2192B\u2192A": [
+        {
+          "field": "C",
+          "op": "Irrigate",
+          "start": 0,
+          "end": 22,
+          "resource": "Pump"
+        },
+        {
+          "field": "C",
+          "op": "Fertilize",
+          "start": 22,
+          "end": 37,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Scout",
+          "start": 37,
+          "end": 47,
+          "resource": "Field"
+        },
+        {
+          "field": "C",
+          "op": "Spray",
+          "start": 47,
+          "end": 60,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Irrigate",
+          "start": 22,
+          "end": 53,
+          "resource": "Pump"
+        },
+        {
+          "field": "B",
+          "op": "Fertilize",
+          "start": 53,
+          "end": 73,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Scout",
+          "start": 73,
+          "end": 87,
+          "resource": "Field"
+        },
+        {
+          "field": "B",
+          "op": "Spray",
+          "start": 87,
+          "end": 104,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Irrigate",
+          "start": 53,
+          "end": 98,
+          "resource": "Pump"
+        },
+        {
+          "field": "A",
+          "op": "Fertilize",
+          "start": 98,
+          "end": 128,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Scout",
+          "start": 128,
+          "end": 148,
+          "resource": "Field"
+        },
+        {
+          "field": "A",
+          "op": "Spray",
+          "start": 148,
+          "end": 173,
+          "resource": "Field"
+        }
+      ]
+    }
+  },
+  "B": {
+    "data": {
+      "source": "PlantVillage, YOLOv7 inference (200 images)",
+      "mAP_0_5": 0.813,
+      "overall_disease_ratio": 0.713,
+      "avg_confidence": 0.867,
+      "fields": {
+        "A": {
+          "disease_ratio": 0.7,
+          "severity": "Severe",
+          "spray_min": 45
+        },
+        "B": {
+          "disease_ratio": 0.15,
+          "severity": "Mild",
+          "spray_min": 15
+        }
+      }
+    },
+    "results": [
+      {
+        "name": "S5: 2 drones\nparallel",
+        "total": 60,
+        "n_drones": 2
+      },
+      {
+        "name": "S1: A first",
+        "total": 90,
+        "n_drones": 1
+      },
+      {
+        "name": "S2: B first",
+        "total": 90,
+        "n_drones": 1
+      },
+      {
+        "name": "S3: Scout both,\nspray short first",
+        "total": 90,
+        "n_drones": 1
+      },
+      {
+        "name": "S4: Scout both,\nspray long first",
+        "total": 90,
+        "n_drones": 1
+      }
+    ],
+    "best": {
+      "name": "S5: 2 drones\nparallel",
+      "total": 60,
+      "n_drones": 2
+    },
+    "best_1drone": {
+      "name": "S1: A first",
+      "total": 90,
+      "n_drones": 1
+    },
+    "saving_min": 30,
+    "saving_pct": 33.3
+  },
+  "C": {
+    "data": {
+      "source": "NASA POWER 1981-2024 (44 years), Hefei",
+      "frost_threshold": "T2M < 2.0\u00b0C",
+      "climatology": {
+        "avg_per_year": 0.6,
+        "prob_any_frost": 0.32,
+        "years_with_frost": 14,
+        "total_years": 44,
+        "frost_days_2024": 1
+      },
+      "fields": {
+        "A": {
+          "name": "Valley (320m)",
+          "frost_risk": 0.55,
+          "value": 300
+        },
+        "B": {
+          "name": "Mid (420m)",
+          "frost_risk": 0.42,
+          "value": 280
+        },
+        "C": {
+          "name": "Upper (520m)",
+          "frost_risk": 0.29,
+          "value": 180
+        }
+      }
+    },
+    "results": [
+      {
+        "name": "S1: Covers\u2192A,B\nAF\u2192C",
+        "protected": {
+          "A": 1.0,
+          "B": 1.0,
+          "C": 0.8
+        },
+        "value": 724.0,
+        "potential": 760,
+        "coverage": 0.9526315789473684,
+        "allocation": [
+          [
+            "A",
+            "Cover",
+            30
+          ],
+          [
+            "B",
+            "Cover",
+            30
+          ],
+          [
+            "C",
+            "AF",
+            60
+          ]
+        ]
+      },
+      {
+        "name": "S3: Covers\u2192A,C\nAF\u2192B",
+        "protected": {
+          "A": 1.0,
+          "C": 1.0,
+          "B": 0.8
+        },
+        "value": 704.0,
+        "potential": 760,
+        "coverage": 0.9263157894736842,
+        "allocation": [
+          [
+            "A",
+            "Cover",
+            30
+          ],
+          [
+            "C",
+            "Cover",
+            30
+          ],
+          [
+            "B",
+            "AF",
+            60
+          ]
+        ]
+      },
+      {
+        "name": "S4: AF\u2192A\nCovers\u2192B,C",
+        "protected": {
+          "A": 0.8,
+          "B": 1.0,
+          "C": 1.0
+        },
+        "value": 700.0,
+        "potential": 760,
+        "coverage": 0.9210526315789473,
+        "allocation": [
+          [
+            "A",
+            "AF",
+            60
+          ],
+          [
+            "B",
+            "Cover",
+            30
+          ],
+          [
+            "C",
+            "Cover",
+            30
+          ]
+        ]
+      },
+      {
+        "name": "S2: Double protect A\nCover B",
+        "protected": {
+          "A": 1.0,
+          "B": 1.0
+        },
+        "value": 580.0,
+        "potential": 760,
+        "coverage": 0.7631578947368421,
+        "allocation": [
+          [
+            "A",
+            "Cover",
+            30
+          ],
+          [
+            "A",
+            "AF",
+            60
+          ],
+          [
+            "B",
+            "Cover",
+            30
+          ]
+        ]
+      }
+    ],
+    "best": {
+      "name": "S1: Covers\u2192A,B\nAF\u2192C",
+      "protected": {
+        "A": 1.0,
+        "B": 1.0,
+        "C": 0.8
+      },
+      "value": 724.0,
+      "potential": 760,
+      "coverage": 0.9526315789473684,
+      "allocation": [
+        [
+          "A",
+          "Cover",
+          30
+        ],
+        [
+          "B",
+          "Cover",
+          30
+        ],
+        [
+          "C",
+          "AF",
+          60
+        ]
+      ]
+    },
+    "saving_value": 144.0,
+    "saving_pct": 24.8
+  },
+  "D": {
+    "data": {
+      "source": "NASA POWER 2024, Apr 1 \u2192 Jun 30",
+      "spring_mean_temp": 21.8,
+      "total_gdd": 1987.0,
+      "stages": [
+        {
+          "threshold": 200,
+          "stage": "Jointing",
+          "date": "4/13",
+          "gdd": 211.9
+        },
+        {
+          "threshold": 400,
+          "stage": "Booting",
+          "date": "4/24",
+          "gdd": 412.1
+        },
+        {
+          "threshold": 600,
+          "stage": "Heading",
+          "date": "5/5",
+          "gdd": 611.8
+        },
+        {
+          "threshold": 800,
+          "stage": "GrainFill",
+          "date": "5/14",
+          "gdd": 800.5
+        },
+        {
+          "threshold": 1000,
+          "stage": "Maturity",
+          "date": "5/23",
+          "gdd": 1013.9
+        }
+      ],
+      "fields": {
+        "A": {
+          "name": "Field A (3ha)",
+          "gdd_factor": 1.0
+        },
+        "B": {
+          "name": "Field B (4ha)",
+          "gdd_factor": 1.0
+        },
+        "C": {
+          "name": "Field C (2.5ha)",
+          "gdd_factor": 1.0
+        }
+      },
+      "schedules": {
+        "A": [
+          {
+            "day": 14,
+            "date": "4/13",
+            "gdd": 211.9,
+            "stage": "Jointing",
+            "duration": 45,
+            "op": "Irrigate",
+            "field": "A"
+          },
+          {
+            "day": 25,
+            "date": "4/24",
+            "gdd": 412.1,
+            "stage": "Booting",
+            "duration": 30,
+            "op": "Fertilize",
+            "field": "A"
+          },
+          {
+            "day": 36,
+            "date": "5/5",
+            "gdd": 611.8,
+            "stage": "Heading",
+            "duration": 40,
+            "op": "Scout+Spray",
+            "field": "A"
+          },
+          {
+            "day": 45,
+            "date": "5/14",
+            "gdd": 800.5,
+            "stage": "GrainFill",
+            "duration": 40,
+            "op": "Irrigate",
+            "field": "A"
+          },
+          {
+            "day": 54,
+            "date": "5/23",
+            "gdd": 1013.9,
+            "stage": "Maturity",
+            "duration": 60,
+            "op": "Harvest",
+            "field": "A"
+          }
+        ],
+        "B": [
+          {
+            "day": 14,
+            "date": "4/13",
+            "gdd": 211.9,
+            "stage": "Jointing",
+            "duration": 45,
+            "op": "Irrigate",
+            "field": "B"
+          },
+          {
+            "day": 25,
+            "date": "4/24",
+            "gdd": 412.1,
+            "stage": "Booting",
+            "duration": 30,
+            "op": "Fertilize",
+            "field": "B"
+          },
+          {
+            "day": 36,
+            "date": "5/5",
+            "gdd": 611.8,
+            "stage": "Heading",
+            "duration": 40,
+            "op": "Scout+Spray",
+            "field": "B"
+          },
+          {
+            "day": 45,
+            "date": "5/14",
+            "gdd": 800.5,
+            "stage": "GrainFill",
+            "duration": 40,
+            "op": "Irrigate",
+            "field": "B"
+          },
+          {
+            "day": 54,
+            "date": "5/23",
+            "gdd": 1013.9,
+            "stage": "Maturity",
+            "duration": 60,
+            "op": "Harvest",
+            "field": "B"
+          }
+        ],
+        "C": [
+          {
+            "day": 14,
+            "date": "4/13",
+            "gdd": 211.9,
+            "stage": "Jointing",
+            "duration": 45,
+            "op": "Irrigate",
+            "field": "C"
+          },
+          {
+            "day": 25,
+            "date": "4/24",
+            "gdd": 412.1,
+            "stage": "Booting",
+            "duration": 30,
+            "op": "Fertilize",
+            "field": "C"
+          },
+          {
+            "day": 36,
+            "date": "5/5",
+            "gdd": 611.8,
+            "stage": "Heading",
+            "duration": 40,
+            "op": "Scout+Spray",
+            "field": "C"
+          },
+          {
+            "day": 45,
+            "date": "5/14",
+            "gdd": 800.5,
+            "stage": "GrainFill",
+            "duration": 40,
+            "op": "Irrigate",
+            "field": "C"
+          },
+          {
+            "day": 54,
+            "date": "5/23",
+            "gdd": 1013.9,
+            "stage": "Maturity",
+            "duration": 60,
+            "op": "Harvest",
+            "field": "C"
+          }
+        ]
+      }
+    },
+    "results": [
+      {
+        "name": "C4: 2P+2D",
+        "work": 645,
+        "wait": 170,
+        "total": 815,
+        "conflict_days": 5
+      },
+      {
+        "name": "C2: 2P+1D",
+        "work": 645,
+        "wait": 220,
+        "total": 865,
+        "conflict_days": 5
+      },
+      {
+        "name": "C3: 1P+2D",
+        "work": 645,
+        "wait": 290,
+        "total": 935,
+        "conflict_days": 5
+      },
+      {
+        "name": "C1: 1P+1D",
+        "work": 645,
+        "wait": 340,
+        "total": 985,
+        "conflict_days": 5
+      }
+    ],
+    "best": {
+      "name": "C4: 2P+2D",
+      "work": 645,
+      "wait": 170,
+      "total": 815,
+      "conflict_days": 5
+    },
+    "baseline": {
+      "name": "C1: 1P+1D",
+      "work": 645,
+      "wait": 340,
+      "total": 985,
+      "conflict_days": 5
+    },
+    "saving_min": 170,
+    "saving_pct": 17.3
+  }
+}

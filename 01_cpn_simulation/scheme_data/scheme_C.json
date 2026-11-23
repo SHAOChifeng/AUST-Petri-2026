@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "name": "S1: Covers\u2192A,B, AF\u2192C",
+      "value": 724.0,
+      "coverage": 95.3
+    },
+    {
+      "name": "S3: Covers\u2192A,C, AF\u2192B",
+      "value": 704.0,
+      "coverage": 92.6
+    },
+    {
+      "name": "S4: AF\u2192A, Covers\u2192B,C",
+      "value": 700.0,
+      "coverage": 92.1
+    },
+    {
+      "name": "S2: Double protect A",
+      "value": 580.0,
+      "coverage": 76.3
+    }
+  ],
+  "best": {
+    "name": "S1: Covers\u2192A,B, AF\u2192C",
+    "value": 724.0,
+    "coverage": 95.3
+  },
+  "saving_pct": 24.8
+}

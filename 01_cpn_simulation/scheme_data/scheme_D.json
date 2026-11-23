@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "config": "2P+2D",
+      "work": 645,
+      "wait": 170,
+      "total": 815,
+      "conflict_days": 5
+    },
+    {
+      "config": "2P+1D",
+      "work": 645,
+      "wait": 220,
+      "total": 865,
+      "conflict_days": 5
+    },
+    {
+      "config": "1P+2D",
+      "work": 645,
+      "wait": 290,
+      "total": 935,
+      "conflict_days": 5
+    },
+    {
+      "config": "1P+1D",
+      "work": 645,
+      "wait": 340,
+      "total": 985,
+      "conflict_days": 5
+    }
+  ],
+  "best": {
+    "config": "2P+2D",
+    "work": 645,
+    "wait": 170,
+    "total": 815,
+    "conflict_days": 5
+  },
+  "saving_pct": 17.3
+}

@@ -1,0 +1,5 @@
+﻿name,value,coverage
+"S1: Covers→A,B, AF→C",724.0,95.3
+"S3: Covers→A,C, AF→B",704.0,92.6
+"S4: AF→A, Covers→B,C",700.0,92.1
+S2: Double protect A,580.0,76.3

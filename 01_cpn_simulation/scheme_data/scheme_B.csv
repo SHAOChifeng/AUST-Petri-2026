@@ -1,0 +1,6 @@
+﻿name,total,n_drones,_key
+S5: 2 drones parallel,60,2,S5: 2 drones parallel
+S1: A first,90,1,S1: A first
+S2: B first,90,1,S2: B first
+"S3: Scout both, spray short 1st",90,1,"S3: Scout both, spray short 1st"
+"S4: Scout both, spray long 1st",90,1,"S4: Scout both, spray long 1st"

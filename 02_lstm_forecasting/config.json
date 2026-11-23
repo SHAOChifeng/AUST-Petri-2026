@@ -1,0 +1,40 @@
+{
+  "model": {
+    "type": "LSTM",
+    "input_size": 6,
+    "hidden_size": 128,
+    "num_layers": 2,
+    "output_size": 6,
+    "output_steps": 7,
+    "dropout": 0.3
+  },
+  "training": {
+    "epochs": 200,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "loss": "MSE",
+    "input_steps": 14,
+    "output_steps": 7,
+    "early_stop_patience": 30,
+    "scheduler": "ReduceLROnPlateau"
+  },
+  "hardware": {
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "data": {
+    "train_samples": 1258,
+    "val_samples": 254,
+    "test_samples": 255,
+    "variables": [
+      "T2M",
+      "PRECTOTCORR",
+      "RH2M",
+      "WS2M",
+      "PS",
+      "ALLSKY_SFC_SW_DWN"
+    ]
+  },
+  "time": "2026-07-18 02:24:26"
+}

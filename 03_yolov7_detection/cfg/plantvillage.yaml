@@ -1,0 +1,8 @@
+train: C:/SCIData/Agronomy/yolo_dataset/images/train
+val: C:/SCIData/Agronomy/yolo_dataset/images/val
+test: C:/SCIData/Agronomy/yolo_dataset/images/test
+
+nc: 2
+names:
+  0: healthy_leaf
+  1: diseased_leaf

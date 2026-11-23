@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "name": "S5: 2 drones parallel",
+      "total": 60,
+      "n_drones": 2,
+      "_key": "S5: 2 drones parallel"
+    },
+    {
+      "name": "S1: A first",
+      "total": 90,
+      "n_drones": 1,
+      "_key": "S1: A first"
+    },
+    {
+      "name": "S2: B first",
+      "total": 90,
+      "n_drones": 1,
+      "_key": "S2: B first"
+    },
+    {
+      "name": "S3: Scout both, spray short 1st",
+      "total": 90,
+      "n_drones": 1,
+      "_key": "S3: Scout both, spray short 1st"
+    },
+    {
+      "name": "S4: Scout both, spray long 1st",
+      "total": 90,
+      "n_drones": 1,
+      "_key": "S4: Scout both, spray long 1st"
+    }
+  ],
+  "best": {
+    "name": "S5: 2 drones parallel",
+    "total": 60,
+    "n_drones": 2,
+    "_key": "S5: 2 drones parallel"
+  },
+  "saving_pct": 33.3
+}

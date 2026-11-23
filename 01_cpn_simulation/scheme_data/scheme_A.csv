@@ -1,0 +1,7 @@
+﻿order,total
+A→B→C,136
+A→C→B,149
+C→A→B,149
+B→A→C,151
+B→C→A,173
+C→B→A,173

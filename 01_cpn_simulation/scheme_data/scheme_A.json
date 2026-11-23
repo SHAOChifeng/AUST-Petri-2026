@@ -1,0 +1,37 @@
+{
+  "results": [
+    {
+      "order": "A\u2192B\u2192C",
+      "total": 136
+    },
+    {
+      "order": "A\u2192C\u2192B",
+      "total": 149
+    },
+    {
+      "order": "C\u2192A\u2192B",
+      "total": 149
+    },
+    {
+      "order": "B\u2192A\u2192C",
+      "total": 151
+    },
+    {
+      "order": "B\u2192C\u2192A",
+      "total": 173
+    },
+    {
+      "order": "C\u2192B\u2192A",
+      "total": 173
+    }
+  ],
+  "best": {
+    "order": "A\u2192B\u2192C",
+    "total": 136
+  },
+  "worst": {
+    "order": "C\u2192B\u2192A",
+    "total": 173
+  },
+  "saving_pct": 21.4
+}

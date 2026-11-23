@@ -1,0 +1,1134 @@
+{
+  "scheme_a": {
+    "data_source": "NASA POWER 2024, Hefei (31.8\u00b0N, 117.2\u00b0E)",
+    "method": "Hargreaves ET\u2080 (FAO-56)",
+    "reference_et0": 9.11,
+    "base_irrigation_min": 45,
+    "spring_et0_stats": {
+      "mean": 10.91,
+      "min": 7.84,
+      "max": 13.98
+    },
+    "fields": {
+      "A": {
+        "name": "Valley Bottom",
+        "area_ha": 3.0,
+        "et0_factor": 1.0,
+        "irrigation_min": 45.0
+      },
+      "B": {
+        "name": "Mid Slope",
+        "area_ha": 2.0,
+        "et0_factor": 0.7,
+        "irrigation_min": 31
+      },
+      "C": {
+        "name": "Upper Slope",
+        "area_ha": 1.5,
+        "et0_factor": 0.5,
+        "irrigation_min": 22
+      }
+    },
+    "daily_et0_sample": [
+      {
+        "date": "4/1",
+        "t2m": 19.97,
+        "et0": 9.61
+      },
+      {
+        "date": "4/2",
+        "t2m": 19.52,
+        "et0": 9.5
+      },
+      {
+        "date": "4/3",
+        "t2m": 15.1,
+        "et0": 8.38
+      },
+      {
+        "date": "4/4",
+        "t2m": 13.7,
+        "et0": 8.02
+      },
+      {
+        "date": "4/5",
+        "t2m": 13.18,
+        "et0": 7.89
+      },
+      {
+        "date": "4/6",
+        "t2m": 13.0,
+        "et0": 7.84
+      },
+      {
+        "date": "4/7",
+        "t2m": 13.83,
+        "et0": 8.05
+      },
+      {
+        "date": "4/8",
+        "t2m": 14.22,
+        "et0": 8.15
+      },
+      {
+        "date": "4/9",
+        "t2m": 16.6,
+        "et0": 8.76
+      },
+      {
+        "date": "4/10",
+        "t2m": 17.34,
+        "et0": 8.95
+      }
+    ]
+  },
+  "scheme_b": {
+    "data_source": "PlantVillage dataset, YOLOv7 inference (200 images)",
+    "total_images": 200,
+    "total_detections": 202,
+    "diseased_detections": 144,
+    "healthy_detections": 58,
+    "overall_disease_ratio": 0.713,
+    "avg_confidence": 0.867,
+    "model_performance": {
+      "mAP_0.5": 0.813,
+      "healthy_AP": 0.847,
+      "diseased_AP": 0.791
+    },
+    "fields": {
+      "A": {
+        "disease_ratio": 0.7,
+        "severity": "Severe",
+        "spray_duration_min": 45,
+        "source": "Derived from PlantVillage: 70% of leaves show disease lesions"
+      },
+      "B": {
+        "disease_ratio": 0.15,
+        "severity": "Mild",
+        "spray_duration_min": 15,
+        "source": "Derived from PlantVillage: 15% of leaves show disease lesions"
+      }
+    }
+  },
+  "scheme_c": {
+    "data_source": "NASA POWER 1981-2024 (44 years), Hefei",
+    "frost_threshold": "T2M < 2.0\u00b0C (estimated Tmin < 0\u00b0C)",
+    "climatology": {
+      "avg_frost_days_per_spring": 0.6,
+      "std_frost_days": 1.1,
+      "max_frost_days": 5,
+      "min_frost_days": 0,
+      "frost_probability_mar_apr": 0.32,
+      "years_with_frost": 14,
+      "total_years": 44
+    },
+    "year_2024": {
+      "frost_days": 1,
+      "frost_dates": [
+        {
+          "date": "3/1",
+          "t2m": 1.17
+        }
+      ]
+    },
+    "fields": {
+      "A": {
+        "name": "Valley Bottom",
+        "elevation": 320,
+        "microclimate_factor": 1.3,
+        "frost_risk": 0.55
+      },
+      "B": {
+        "name": "Mid Slope",
+        "elevation": 420,
+        "microclimate_factor": 1.0,
+        "frost_risk": 0.42
+      },
+      "C": {
+        "name": "Upper Slope",
+        "elevation": 520,
+        "microclimate_factor": 0.7,
+        "frost_risk": 0.29
+      }
+    }
+  },
+  "scheme_d": {
+    "data_source": "NASA POWER 2024, Apr 1 \u2192 Jun 30",
+    "gdd_method": "Growing Degree Days, base=0\u00b0C (winter wheat)",
+    "base_temperature": 0.0,
+    "total_gdd": 1987.0,
+    "spring_mean_temp": 21.8,
+    "stages": [
+      {
+        "threshold": 200,
+        "stage": "Jointing",
+        "op": "Irrigate",
+        "duration": 45
+      },
+      {
+        "threshold": 400,
+        "stage": "Booting",
+        "op": "Fertilize",
+        "duration": 30
+      },
+      {
+        "threshold": 600,
+        "stage": "Heading",
+        "op": "Scout+Spray",
+        "duration": 40
+      },
+      {
+        "threshold": 800,
+        "stage": "GrainFill",
+        "op": "Irrigate",
+        "duration": 40
+      },
+      {
+        "threshold": 1000,
+        "stage": "Maturity",
+        "op": "Harvest",
+        "duration": 60
+      }
+    ],
+    "stage_hit_dates": [
+      {
+        "threshold": 200,
+        "stage": "Jointing",
+        "date": "4/13",
+        "doy": 103,
+        "gdd_actual": 211.9
+      },
+      {
+        "threshold": 400,
+        "stage": "Booting",
+        "date": "4/24",
+        "doy": 114,
+        "gdd_actual": 412.1
+      },
+      {
+        "threshold": 600,
+        "stage": "Heading",
+        "date": "5/5",
+        "doy": 125,
+        "gdd_actual": 611.8
+      },
+      {
+        "threshold": 800,
+        "stage": "GrainFill",
+        "date": "5/14",
+        "doy": 134,
+        "gdd_actual": 800.5
+      },
+      {
+        "threshold": 1000,
+        "stage": "Maturity",
+        "date": "5/23",
+        "doy": 143,
+        "gdd_actual": 1013.9
+      }
+    ],
+    "gdd_curve": [
+      {
+        "doy": 91,
+        "month": 4,
+        "day": 1,
+        "t2m": 19.97,
+        "gdd_daily": 20.0,
+        "gdd_cumulative": 20.0
+      },
+      {
+        "doy": 92,
+        "month": 4,
+        "day": 2,
+        "t2m": 19.52,
+        "gdd_daily": 19.5,
+        "gdd_cumulative": 39.5
+      },
+      {
+        "doy": 93,
+        "month": 4,
+        "day": 3,
+        "t2m": 15.1,
+        "gdd_daily": 15.1,
+        "gdd_cumulative": 54.6
+      },
+      {
+        "doy": 94,
+        "month": 4,
+        "day": 4,
+        "t2m": 13.7,
+        "gdd_daily": 13.7,
+        "gdd_cumulative": 68.3
+      },
+      {
+        "doy": 95,
+        "month": 4,
+        "day": 5,
+        "t2m": 13.18,
+        "gdd_daily": 13.2,
+        "gdd_cumulative": 81.5
+      },
+      {
+        "doy": 96,
+        "month": 4,
+        "day": 6,
+        "t2m": 13.0,
+        "gdd_daily": 13.0,
+        "gdd_cumulative": 94.5
+      },
+      {
+        "doy": 97,
+        "month": 4,
+        "day": 7,
+        "t2m": 13.83,
+        "gdd_daily": 13.8,
+        "gdd_cumulative": 108.3
+      },
+      {
+        "doy": 98,
+        "month": 4,
+        "day": 8,
+        "t2m": 14.22,
+        "gdd_daily": 14.2,
+        "gdd_cumulative": 122.5
+      },
+      {
+        "doy": 99,
+        "month": 4,
+        "day": 9,
+        "t2m": 16.6,
+        "gdd_daily": 16.6,
+        "gdd_cumulative": 139.1
+      },
+      {
+        "doy": 100,
+        "month": 4,
+        "day": 10,
+        "t2m": 17.34,
+        "gdd_daily": 17.3,
+        "gdd_cumulative": 156.5
+      },
+      {
+        "doy": 101,
+        "month": 4,
+        "day": 11,
+        "t2m": 17.64,
+        "gdd_daily": 17.6,
+        "gdd_cumulative": 174.1
+      },
+      {
+        "doy": 102,
+        "month": 4,
+        "day": 12,
+        "t2m": 18.88,
+        "gdd_daily": 18.9,
+        "gdd_cumulative": 193.0
+      },
+      {
+        "doy": 103,
+        "month": 4,
+        "day": 13,
+        "t2m": 18.92,
+        "gdd_daily": 18.9,
+        "gdd_cumulative": 211.9
+      },
+      {
+        "doy": 104,
+        "month": 4,
+        "day": 14,
+        "t2m": 19.75,
+        "gdd_daily": 19.8,
+        "gdd_cumulative": 231.7
+      },
+      {
+        "doy": 105,
+        "month": 4,
+        "day": 15,
+        "t2m": 19.52,
+        "gdd_daily": 19.5,
+        "gdd_cumulative": 251.2
+      },
+      {
+        "doy": 106,
+        "month": 4,
+        "day": 16,
+        "t2m": 18.76,
+        "gdd_daily": 18.8,
+        "gdd_cumulative": 269.9
+      },
+      {
+        "doy": 107,
+        "month": 4,
+        "day": 17,
+        "t2m": 15.1,
+        "gdd_daily": 15.1,
+        "gdd_cumulative": 285.0
+      },
+      {
+        "doy": 108,
+        "month": 4,
+        "day": 18,
+        "t2m": 16.35,
+        "gdd_daily": 16.4,
+        "gdd_cumulative": 301.4
+      },
+      {
+        "doy": 109,
+        "month": 4,
+        "day": 19,
+        "t2m": 17.2,
+        "gdd_daily": 17.2,
+        "gdd_cumulative": 318.6
+      },
+      {
+        "doy": 110,
+        "month": 4,
+        "day": 20,
+        "t2m": 18.28,
+        "gdd_daily": 18.3,
+        "gdd_cumulative": 336.9
+      },
+      {
+        "doy": 111,
+        "month": 4,
+        "day": 21,
+        "t2m": 18.81,
+        "gdd_daily": 18.8,
+        "gdd_cumulative": 355.7
+      },
+      {
+        "doy": 112,
+        "month": 4,
+        "day": 22,
+        "t2m": 19.04,
+        "gdd_daily": 19.0,
+        "gdd_cumulative": 374.7
+      },
+      {
+        "doy": 113,
+        "month": 4,
+        "day": 23,
+        "t2m": 19.35,
+        "gdd_daily": 19.4,
+        "gdd_cumulative": 394.1
+      },
+      {
+        "doy": 114,
+        "month": 4,
+        "day": 24,
+        "t2m": 18.07,
+        "gdd_daily": 18.1,
+        "gdd_cumulative": 412.1
+      },
+      {
+        "doy": 115,
+        "month": 4,
+        "day": 25,
+        "t2m": 19.05,
+        "gdd_daily": 19.1,
+        "gdd_cumulative": 431.2
+      },
+      {
+        "doy": 116,
+        "month": 4,
+        "day": 26,
+        "t2m": 20.64,
+        "gdd_daily": 20.6,
+        "gdd_cumulative": 451.8
+      },
+      {
+        "doy": 117,
+        "month": 4,
+        "day": 27,
+        "t2m": 21.28,
+        "gdd_daily": 21.3,
+        "gdd_cumulative": 473.1
+      },
+      {
+        "doy": 118,
+        "month": 4,
+        "day": 28,
+        "t2m": 18.8,
+        "gdd_daily": 18.8,
+        "gdd_cumulative": 491.9
+      },
+      {
+        "doy": 119,
+        "month": 4,
+        "day": 29,
+        "t2m": 18.93,
+        "gdd_daily": 18.9,
+        "gdd_cumulative": 510.8
+      },
+      {
+        "doy": 120,
+        "month": 4,
+        "day": 30,
+        "t2m": 14.7,
+        "gdd_daily": 14.7,
+        "gdd_cumulative": 525.5
+      },
+      {
+        "doy": 121,
+        "month": 5,
+        "day": 1,
+        "t2m": 16.19,
+        "gdd_daily": 16.2,
+        "gdd_cumulative": 541.7
+      },
+      {
+        "doy": 122,
+        "month": 5,
+        "day": 2,
+        "t2m": 17.76,
+        "gdd_daily": 17.8,
+        "gdd_cumulative": 559.5
+      },
+      {
+        "doy": 123,
+        "month": 5,
+        "day": 3,
+        "t2m": 17.44,
+        "gdd_daily": 17.4,
+        "gdd_cumulative": 576.9
+      },
+      {
+        "doy": 124,
+        "month": 5,
+        "day": 4,
+        "t2m": 17.62,
+        "gdd_daily": 17.6,
+        "gdd_cumulative": 594.5
+      },
+      {
+        "doy": 125,
+        "month": 5,
+        "day": 5,
+        "t2m": 17.24,
+        "gdd_daily": 17.2,
+        "gdd_cumulative": 611.8
+      },
+      {
+        "doy": 126,
+        "month": 5,
+        "day": 6,
+        "t2m": 21.07,
+        "gdd_daily": 21.1,
+        "gdd_cumulative": 632.9
+      },
+      {
+        "doy": 127,
+        "month": 5,
+        "day": 7,
+        "t2m": 22.58,
+        "gdd_daily": 22.6,
+        "gdd_cumulative": 655.4
+      },
+      {
+        "doy": 128,
+        "month": 5,
+        "day": 8,
+        "t2m": 19.55,
+        "gdd_daily": 19.6,
+        "gdd_cumulative": 675.0
+      },
+      {
+        "doy": 129,
+        "month": 5,
+        "day": 9,
+        "t2m": 19.29,
+        "gdd_daily": 19.3,
+        "gdd_cumulative": 694.3
+      },
+      {
+        "doy": 130,
+        "month": 5,
+        "day": 10,
+        "t2m": 22.69,
+        "gdd_daily": 22.7,
+        "gdd_cumulative": 717.0
+      },
+      {
+        "doy": 131,
+        "month": 5,
+        "day": 11,
+        "t2m": 21.33,
+        "gdd_daily": 21.3,
+        "gdd_cumulative": 738.3
+      },
+      {
+        "doy": 132,
+        "month": 5,
+        "day": 12,
+        "t2m": 19.61,
+        "gdd_daily": 19.6,
+        "gdd_cumulative": 757.9
+      },
+      {
+        "doy": 133,
+        "month": 5,
+        "day": 13,
+        "t2m": 20.72,
+        "gdd_daily": 20.7,
+        "gdd_cumulative": 778.6
+      },
+      {
+        "doy": 134,
+        "month": 5,
+        "day": 14,
+        "t2m": 21.87,
+        "gdd_daily": 21.9,
+        "gdd_cumulative": 800.5
+      },
+      {
+        "doy": 135,
+        "month": 5,
+        "day": 15,
+        "t2m": 19.33,
+        "gdd_daily": 19.3,
+        "gdd_cumulative": 819.8
+      },
+      {
+        "doy": 136,
+        "month": 5,
+        "day": 16,
+        "t2m": 20.04,
+        "gdd_daily": 20.0,
+        "gdd_cumulative": 839.9
+      },
+      {
+        "doy": 137,
+        "month": 5,
+        "day": 17,
+        "t2m": 25.07,
+        "gdd_daily": 25.1,
+        "gdd_cumulative": 864.9
+      },
+      {
+        "doy": 138,
+        "month": 5,
+        "day": 18,
+        "t2m": 26.42,
+        "gdd_daily": 26.4,
+        "gdd_cumulative": 891.4
+      },
+      {
+        "doy": 139,
+        "month": 5,
+        "day": 19,
+        "t2m": 25.13,
+        "gdd_daily": 25.1,
+        "gdd_cumulative": 916.5
+      },
+      {
+        "doy": 140,
+        "month": 5,
+        "day": 20,
+        "t2m": 24.25,
+        "gdd_daily": 24.2,
+        "gdd_cumulative": 940.7
+      },
+      {
+        "doy": 141,
+        "month": 5,
+        "day": 21,
+        "t2m": 23.18,
+        "gdd_daily": 23.2,
+        "gdd_cumulative": 963.9
+      },
+      {
+        "doy": 142,
+        "month": 5,
+        "day": 22,
+        "t2m": 24.27,
+        "gdd_daily": 24.3,
+        "gdd_cumulative": 988.2
+      },
+      {
+        "doy": 143,
+        "month": 5,
+        "day": 23,
+        "t2m": 25.72,
+        "gdd_daily": 25.7,
+        "gdd_cumulative": 1013.9
+      },
+      {
+        "doy": 144,
+        "month": 5,
+        "day": 24,
+        "t2m": 27.15,
+        "gdd_daily": 27.1,
+        "gdd_cumulative": 1041.1
+      },
+      {
+        "doy": 145,
+        "month": 5,
+        "day": 25,
+        "t2m": 27.42,
+        "gdd_daily": 27.4,
+        "gdd_cumulative": 1068.5
+      },
+      {
+        "doy": 146,
+        "month": 5,
+        "day": 26,
+        "t2m": 25.89,
+        "gdd_daily": 25.9,
+        "gdd_cumulative": 1094.4
+      },
+      {
+        "doy": 147,
+        "month": 5,
+        "day": 27,
+        "t2m": 19.53,
+        "gdd_daily": 19.5,
+        "gdd_cumulative": 1113.9
+      },
+      {
+        "doy": 148,
+        "month": 5,
+        "day": 28,
+        "t2m": 20.89,
+        "gdd_daily": 20.9,
+        "gdd_cumulative": 1134.8
+      },
+      {
+        "doy": 149,
+        "month": 5,
+        "day": 29,
+        "t2m": 20.91,
+        "gdd_daily": 20.9,
+        "gdd_cumulative": 1155.7
+      },
+      {
+        "doy": 150,
+        "month": 5,
+        "day": 30,
+        "t2m": 20.31,
+        "gdd_daily": 20.3,
+        "gdd_cumulative": 1176.0
+      },
+      {
+        "doy": 151,
+        "month": 5,
+        "day": 31,
+        "t2m": 22.79,
+        "gdd_daily": 22.8,
+        "gdd_cumulative": 1198.8
+      },
+      {
+        "doy": 152,
+        "month": 6,
+        "day": 1,
+        "t2m": 23.03,
+        "gdd_daily": 23.0,
+        "gdd_cumulative": 1221.8
+      },
+      {
+        "doy": 153,
+        "month": 6,
+        "day": 2,
+        "t2m": 22.17,
+        "gdd_daily": 22.2,
+        "gdd_cumulative": 1244.0
+      },
+      {
+        "doy": 154,
+        "month": 6,
+        "day": 3,
+        "t2m": 25.57,
+        "gdd_daily": 25.6,
+        "gdd_cumulative": 1269.6
+      },
+      {
+        "doy": 155,
+        "month": 6,
+        "day": 4,
+        "t2m": 23.97,
+        "gdd_daily": 24.0,
+        "gdd_cumulative": 1293.5
+      },
+      {
+        "doy": 156,
+        "month": 6,
+        "day": 5,
+        "t2m": 21.39,
+        "gdd_daily": 21.4,
+        "gdd_cumulative": 1314.9
+      },
+      {
+        "doy": 157,
+        "month": 6,
+        "day": 6,
+        "t2m": 21.97,
+        "gdd_daily": 22.0,
+        "gdd_cumulative": 1336.9
+      },
+      {
+        "doy": 158,
+        "month": 6,
+        "day": 7,
+        "t2m": 23.18,
+        "gdd_daily": 23.2,
+        "gdd_cumulative": 1360.1
+      },
+      {
+        "doy": 159,
+        "month": 6,
+        "day": 8,
+        "t2m": 26.04,
+        "gdd_daily": 26.0,
+        "gdd_cumulative": 1386.1
+      },
+      {
+        "doy": 160,
+        "month": 6,
+        "day": 9,
+        "t2m": 27.28,
+        "gdd_daily": 27.3,
+        "gdd_cumulative": 1413.4
+      },
+      {
+        "doy": 161,
+        "month": 6,
+        "day": 10,
+        "t2m": 27.41,
+        "gdd_daily": 27.4,
+        "gdd_cumulative": 1440.8
+      },
+      {
+        "doy": 162,
+        "month": 6,
+        "day": 11,
+        "t2m": 27.38,
+        "gdd_daily": 27.4,
+        "gdd_cumulative": 1468.2
+      },
+      {
+        "doy": 163,
+        "month": 6,
+        "day": 12,
+        "t2m": 29.03,
+        "gdd_daily": 29.0,
+        "gdd_cumulative": 1497.2
+      },
+      {
+        "doy": 164,
+        "month": 6,
+        "day": 13,
+        "t2m": 28.05,
+        "gdd_daily": 28.1,
+        "gdd_cumulative": 1525.3
+      },
+      {
+        "doy": 165,
+        "month": 6,
+        "day": 14,
+        "t2m": 29.68,
+        "gdd_daily": 29.7,
+        "gdd_cumulative": 1554.9
+      },
+      {
+        "doy": 166,
+        "month": 6,
+        "day": 15,
+        "t2m": 30.24,
+        "gdd_daily": 30.2,
+        "gdd_cumulative": 1585.2
+      },
+      {
+        "doy": 167,
+        "month": 6,
+        "day": 16,
+        "t2m": 28.42,
+        "gdd_daily": 28.4,
+        "gdd_cumulative": 1613.6
+      },
+      {
+        "doy": 168,
+        "month": 6,
+        "day": 17,
+        "t2m": 28.04,
+        "gdd_daily": 28.0,
+        "gdd_cumulative": 1641.6
+      },
+      {
+        "doy": 169,
+        "month": 6,
+        "day": 18,
+        "t2m": 28.12,
+        "gdd_daily": 28.1,
+        "gdd_cumulative": 1669.8
+      },
+      {
+        "doy": 170,
+        "month": 6,
+        "day": 19,
+        "t2m": 25.52,
+        "gdd_daily": 25.5,
+        "gdd_cumulative": 1695.3
+      },
+      {
+        "doy": 171,
+        "month": 6,
+        "day": 20,
+        "t2m": 28.85,
+        "gdd_daily": 28.9,
+        "gdd_cumulative": 1724.1
+      },
+      {
+        "doy": 172,
+        "month": 6,
+        "day": 21,
+        "t2m": 28.7,
+        "gdd_daily": 28.7,
+        "gdd_cumulative": 1752.8
+      },
+      {
+        "doy": 173,
+        "month": 6,
+        "day": 22,
+        "t2m": 27.83,
+        "gdd_daily": 27.8,
+        "gdd_cumulative": 1780.7
+      },
+      {
+        "doy": 174,
+        "month": 6,
+        "day": 23,
+        "t2m": 27.15,
+        "gdd_daily": 27.1,
+        "gdd_cumulative": 1807.8
+      },
+      {
+        "doy": 175,
+        "month": 6,
+        "day": 24,
+        "t2m": 26.79,
+        "gdd_daily": 26.8,
+        "gdd_cumulative": 1834.6
+      },
+      {
+        "doy": 176,
+        "month": 6,
+        "day": 25,
+        "t2m": 24.88,
+        "gdd_daily": 24.9,
+        "gdd_cumulative": 1859.5
+      },
+      {
+        "doy": 177,
+        "month": 6,
+        "day": 26,
+        "t2m": 24.37,
+        "gdd_daily": 24.4,
+        "gdd_cumulative": 1883.9
+      },
+      {
+        "doy": 178,
+        "month": 6,
+        "day": 27,
+        "t2m": 24.53,
+        "gdd_daily": 24.5,
+        "gdd_cumulative": 1908.4
+      },
+      {
+        "doy": 179,
+        "month": 6,
+        "day": 28,
+        "t2m": 24.99,
+        "gdd_daily": 25.0,
+        "gdd_cumulative": 1933.4
+      },
+      {
+        "doy": 180,
+        "month": 6,
+        "day": 29,
+        "t2m": 26.37,
+        "gdd_daily": 26.4,
+        "gdd_cumulative": 1959.7
+      },
+      {
+        "doy": 181,
+        "month": 6,
+        "day": 30,
+        "t2m": 27.27,
+        "gdd_daily": 27.3,
+        "gdd_cumulative": 1987.0
+      }
+    ],
+    "fields": {
+      "A": {
+        "name": "Valley Bottom",
+        "gdd_factor": 1.1,
+        "area_ha": 3.0
+      },
+      "B": {
+        "name": "Mid Slope",
+        "gdd_factor": 1.0,
+        "area_ha": 4.0
+      },
+      "C": {
+        "name": "Upper Slope",
+        "gdd_factor": 0.9,
+        "area_ha": 2.5
+      }
+    },
+    "schedules": {
+      "A": [
+        {
+          "day": 12,
+          "date": "4/12",
+          "gdd": 212.3,
+          "stage": "Jointing",
+          "op": "Irrigate",
+          "duration": 45,
+          "field": "A"
+        },
+        {
+          "day": 22,
+          "date": "4/22",
+          "gdd": 412.2,
+          "stage": "Booting",
+          "op": "Fertilize",
+          "duration": 30,
+          "field": "A"
+        },
+        {
+          "day": 32,
+          "date": "5/2",
+          "gdd": 615.4,
+          "stage": "Heading",
+          "op": "Scout+Spray",
+          "duration": 40,
+          "field": "A"
+        },
+        {
+          "day": 41,
+          "date": "5/11",
+          "gdd": 812.1,
+          "stage": "GrainFill",
+          "op": "Irrigate",
+          "duration": 40,
+          "field": "A"
+        },
+        {
+          "day": 49,
+          "date": "5/19",
+          "gdd": 1008.1,
+          "stage": "Maturity",
+          "op": "Harvest",
+          "duration": 60,
+          "field": "A"
+        }
+      ],
+      "B": [
+        {
+          "day": 13,
+          "date": "4/13",
+          "gdd": 211.9,
+          "stage": "Jointing",
+          "op": "Irrigate",
+          "duration": 45,
+          "field": "B"
+        },
+        {
+          "day": 24,
+          "date": "4/24",
+          "gdd": 412.1,
+          "stage": "Booting",
+          "op": "Fertilize",
+          "duration": 30,
+          "field": "B"
+        },
+        {
+          "day": 35,
+          "date": "5/5",
+          "gdd": 611.8,
+          "stage": "Heading",
+          "op": "Scout+Spray",
+          "duration": 40,
+          "field": "B"
+        },
+        {
+          "day": 44,
+          "date": "5/14",
+          "gdd": 800.5,
+          "stage": "GrainFill",
+          "op": "Irrigate",
+          "duration": 40,
+          "field": "B"
+        },
+        {
+          "day": 53,
+          "date": "5/23",
+          "gdd": 1013.9,
+          "stage": "Maturity",
+          "op": "Harvest",
+          "duration": 60,
+          "field": "B"
+        }
+      ],
+      "C": [
+        {
+          "day": 14,
+          "date": "4/14",
+          "gdd": 208.5,
+          "stage": "Jointing",
+          "op": "Irrigate",
+          "duration": 45,
+          "field": "C"
+        },
+        {
+          "day": 26,
+          "date": "4/26",
+          "gdd": 406.6,
+          "stage": "Booting",
+          "op": "Fertilize",
+          "duration": 30,
+          "field": "C"
+        },
+        {
+          "day": 38,
+          "date": "5/8",
+          "gdd": 607.5,
+          "stage": "Heading",
+          "op": "Scout+Spray",
+          "duration": 40,
+          "field": "C"
+        },
+        {
+          "day": 48,
+          "date": "5/18",
+          "gdd": 802.2,
+          "stage": "GrainFill",
+          "op": "Irrigate",
+          "duration": 40,
+          "field": "C"
+        },
+        {
+          "day": 57,
+          "date": "5/27",
+          "gdd": 1002.5,
+          "stage": "Maturity",
+          "op": "Harvest",
+          "duration": 60,
+          "field": "C"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "data_source": "NASA POWER 1981-2024, Hefei/Anhui (31.8\u00b0N, 117.2\u00b0E)",
+    "variables": [
+      "T2M",
+      "PRECTOTCORR",
+      "RH2M",
+      "WS2M",
+      "PS",
+      "ALLSKY_SFC_SW_DWN"
+    ],
+    "generated": "2026-07-19",
+    "purpose": "Replace simulated data with real NASA POWER data for all 4 schemes"
+  }
+}
